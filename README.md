@@ -9,6 +9,6 @@ Eric Matthes. The autor of the book give me the right, I quote, "to
 share the code you wrote for the exercises in the book to show people 
 what you have learned", but he give me one stipulation, I quote, "as 
 long as you're not trying to create a learning resource based largely 
-on the material from this book. So please don't create a learning 
+on the material from this book". So please don't create a learning 
 resource from this material.
 Requirements: python 3.7 - rest in requirements.txt .
