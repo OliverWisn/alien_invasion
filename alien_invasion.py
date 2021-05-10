@@ -13,6 +13,9 @@ way the game works."""
         self.screen = pygame.display.set_mode((1366, 768))
         pygame.display.set_caption("Alien Invasion")
 
+        # Defining of the colour of the background.
+        self.bg_color = (230, 230, 230)
+
     def run_game(self):
         """Start of the main loop of the game"""
         while True:
@@ -20,6 +23,10 @@ way the game works."""
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+
+            # The screen refresh in the time of the every loop 
+            # iteration.
+            self.screen.fill(self.bg_color)
 
             # Display of the last modified screen.
             pygame.display.flip()
