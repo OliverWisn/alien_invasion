@@ -23,12 +23,22 @@ Requirements:
 
     python 3.7 - rest in requirements.txt .
 
-Game Summary:
+Remarks:
 
+    I make this game so that the master branch has always 
+the functioning code. To run the game you must run the file
+"alien_invasion.py".
+
+Game Summary:
+ 
     In Alien Invasion, the player controls a ship that appears at the 
 bottom center of the screen. The player can move the ship right and 
 left using the arrow keys and shoot bullets using the spacebar. When 
-the game begins, a fleet of aliens fills the sky and moves across and 
+I make this game so that the master branch has always
+the functioning code. To run the game you must run the file
+"alien_invasion.py".I make this game so that the master branch has always
+the functioning code. To run the game you must run the file
+"alien_invasion.py".the game begins, a fleet of aliens fills the sky and moves across and 
 down the screen. The player shoots and destroys the aliens. If the player 
 shoots all the aliens, a new fleet appears that moves faster than the 
 previous fleet. If any alien hits the player’s ship or reaches the bottom 
