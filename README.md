@@ -1,14 +1,14 @@
 # Alien Invasion
 
 ## Motivation:
-    I make this game "Alien Invasion" because I learn the python 
+I make this game "Alien Invasion" because I learn the python 
 language. I would like to walk through the python language essentials 
 with the standard library + pygame and the sublime text editor. I would 
 like to show my skills because I will add to this programm my own code 
 in the future. 
 
 ## Rights:
-    This game is made on the basis of the book "Python Crash Course - 
+This game is made on the basis of the book "Python Crash Course - 
 A Hands-On, Project-Based Introduction to Programming" by Eric Matthes. 
 The autor of the book give me the right, I quote, "to share the code 
 you wrote for the exercises in the book to show people what you have 
@@ -18,15 +18,15 @@ from this book". So please don't create a learning resource from this
 material.
 
 ## Requirements: 
-    python 3.7 - rest in requirements.txt .
+python 3.7 - rest in requirements.txt .
 
 ## Remarks:
-    I make this game so that the master branch has always 
+I make this game so that the master branch has always 
 the functioning code. To run the game you must run the file
 "alien_invasion.py".
 
 ## Game Summary:
-    In Alien Invasion, the player controls a ship that appears at the 
+In Alien Invasion, the player controls a ship that appears at the 
 bottom center of the screen. The player can move the ship right and 
 left using the arrow keys and shoot bullets using the spacebar. When 
 I make this game so that the master branch has always
@@ -48,4 +48,4 @@ the game ends.
     q : to quit game.
 
 ## Version:
-    This is version 1.0 of the game Alien Invasion.
+This is version 1.0 of the game Alien Invasion.
