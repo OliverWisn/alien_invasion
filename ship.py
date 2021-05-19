@@ -19,6 +19,7 @@ class Ship:
 
         # Options that indicate the moving of the ship.
         self.moving_right = False
+        self.moving_left = False
 
     def update(self):
         """
@@ -27,6 +28,8 @@ class Ship:
         """
         if self.moving_right:
             self.rect.x += 1
+        if self.moving_left:
+            self.rect.x -= 1
 
     def blitme(self):
         """Displaying of the spaceship in his actual location."""
