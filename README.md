@@ -41,7 +41,7 @@ of the screen, the player loses a ship. If the player loses three ships,
 the game ends.
 
 ## Game Controls:    
-    <-- (Left arrow key) : Moves ship towards left.
+    a or <-- (Left arrow key) : Moves ship towards left.
     d or --> (Right arrow key) : Moves ship towards right.
     Spacebar : To shoot bullets.
     p : to start game (play).
