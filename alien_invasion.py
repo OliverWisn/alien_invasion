@@ -38,7 +38,7 @@ class AlienInvasion:
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
-               self._check_keyup_events(event)
+                self._check_keyup_events(event)
 
         # Check for the pressed keys that didn't release.
         self._check_pressed_keys()
@@ -49,6 +49,8 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = True
+        elif event.key == pygame.K_q:
+            sys.exit()
 
     def _check_keyup_events(self, event):
         """Reaction for the releasing of the key."""
