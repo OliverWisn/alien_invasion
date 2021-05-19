@@ -31,9 +31,10 @@ class Ship:
         Updating of the location of the ship on the basis of options 
         that indicate the moving of the ship.
         """
-        if self.moving_right:
+        # Update of the value of the coordinate x of the ship.
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.x += self.settings.ship_speed
-        if self.moving_left:
+        if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
 
         # Update of the object rect on the basis of the value of self.x.
