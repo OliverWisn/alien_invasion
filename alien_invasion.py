@@ -50,7 +50,7 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = True
-        elif event.key == pygame.K_q:
+        elif event.key == pygame.K_q or pygame.K_ESCAPE:
             sys.exit()
 
     def _check_keyup_events(self, event):

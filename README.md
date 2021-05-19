@@ -45,7 +45,7 @@ the game ends.
     d or --> (Right arrow key) : Moves ship towards right.
     Spacebar : To shoot bullets.
     p : to start game (play).
-    q : to quit game.
+    q or Esc : to quit game.
 
 ## Version:
 This is version 1.0 of the game Alien Invasion.
