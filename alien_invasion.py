@@ -4,6 +4,7 @@ import pygame
 
 from settings import Settings
 from ship import Ship
+from bullet import Bullet
 
 class AlienInvasion:
     """
@@ -56,6 +57,8 @@ class AlienInvasion:
             self.ship.moving_left = True
         elif event.key == pygame.K_q or pygame.K_ESCAPE:
             sys.exit()
+        elif event.key == pygame.K_SPACE:
+            self._fire_bullet()
 
     def _check_keyup_events(self, event):
         """Reaction for the releasing of the key."""
@@ -73,6 +76,14 @@ class AlienInvasion:
         elif keys[pygame.K_a] or keys[pygame.K_LEFT]:
             self.ship.moving_left = True
 
+    def _fire_bullet(self):
+        """
+        Setting up of a new bullet and add him to the group of 
+        the bullets.
+        """
+        new_bullet = Bullet(self)
+        self.bullets.add(new_bullet)
+
     def _update_screen(self):
         """
         Updating of the view on the screen and the transition to 
@@ -80,6 +91,8 @@ class AlienInvasion:
         """
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
+        for bullet in self.bullets.sprites():
+            bullet.draw_bullet()
 
         pygame.display.flip()
 
