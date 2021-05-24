@@ -45,6 +45,8 @@ class AlienInvasion:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                self._check_mouse_buttons(event)
 
         # Check for the pressed keys that didn't release.
         self._check_pressed_keys()
@@ -75,6 +77,11 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif keys[pygame.K_a] or keys[pygame.K_LEFT]:
             self.ship.moving_left = True
+
+    def _check_mouse_buttons(self, event):
+        """Reaction for the pressing of the left mouse button."""
+        if event.button == 1:
+            self._fire_bullet()
 
     def _fire_bullet(self):
         """
