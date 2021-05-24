@@ -43,7 +43,7 @@ the game ends.
 ## Game Controls:    
     a or <-- (Left arrow key) : Moves ship towards left.
     d or --> (Right arrow key) : Moves ship towards right.
-    Spacebar : To shoot bullets.
+    Spacebar or left mouse button : To shoot bullets.
     p : to start game (play).
     q or Esc : to quit game.
 
