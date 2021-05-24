@@ -1,7 +1,7 @@
 class Settings:
     """
-    Class is destined for the storage of the all settings of the 
-    game.
+    Class is destined for the storage of the all settings of 
+    the game.
     """
 
     def __init__(self):

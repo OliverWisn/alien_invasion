@@ -7,8 +7,8 @@ from ship import Ship
 
 class AlienInvasion:
     """
-    General class dedicated to the managing the resources and the 
-    way the game works.
+    General class dedicated to the managing the resources and the way 
+    the game works.
     """
 
     def __init__(self):
