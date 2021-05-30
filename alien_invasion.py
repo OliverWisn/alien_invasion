@@ -113,9 +113,25 @@ class AlienInvasion:
         """
         Setting up of the full fleet of the spaceships of the aliens.
         """
-        # Setting up of the spaceship of the alien.
+        # Setting up of the spaceship of the alien and the seting 
+        # the number of the spaceships of the aliens that fits in 
+        # a row.
+        # The distance between the particular spaceships of the aliens 
+        # is equal to the width of the rectangle of the spaceship of 
+        # the alien.
         alien = Alien(self)
-        self.aliens.add(alien)
+        alien_width = alien.rect.width
+        avialable_space_x = self.settings.screen_width - (2 * alien_width)
+        number_aliens_x = avialable_space_x // (2 * alien_width)
+
+        # Setting up of the first row of the spaceships of the aliens.
+        for alien_number in range(number_aliens_x):
+            # Setting up of the spaceship of the alien and placing him 
+            # in the row.
+            alien = Alien(self)
+            alien.x = alien_width + 2 * alien_width * alien_number
+            alien.rect.x = alien.x
+            self.aliens.add(alien)
 
     def _update_screen(self):
         """
