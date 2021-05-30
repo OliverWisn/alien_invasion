@@ -89,7 +89,7 @@ class AlienInvasion:
 
     def _fire_bullet(self):
         """
-        Setting up of a new bullet and add him to the group of 
+        Creation of a new bullet and add him to the group of 
         the bullets.
         """
         if len(self.bullets) < self.settings.bullets_allowed:
@@ -111,9 +111,9 @@ class AlienInvasion:
 
     def _create_fleet(self):
         """
-        Setting up of the full fleet of the spaceships of the aliens.
+        Creation of the full fleet of the spaceships of the aliens.
         """
-        # Setting up of the spaceship of the alien and the seting 
+        # Creation of the spaceship of the alien and the seting 
         # the number of the spaceships of the aliens that fits in 
         # a row.
         # The distance between the particular spaceships of the aliens 
@@ -124,14 +124,20 @@ class AlienInvasion:
         avialable_space_x = self.settings.screen_width - (2 * alien_width)
         number_aliens_x = avialable_space_x // (2 * alien_width)
 
-        # Setting up of the first row of the spaceships of the aliens.
+        # Creation of the first row of the spaceships of the aliens.
         for alien_number in range(number_aliens_x):
-            # Setting up of the spaceship of the alien and placing him 
-            # in the row.
-            alien = Alien(self)
-            alien.x = alien_width + 2 * alien_width * alien_number
-            alien.rect.x = alien.x
-            self.aliens.add(alien)
+            self._create_alien(alien_number) 
+
+    def _create_alien(self, alien_number):
+        """
+        Creation of the spaceship of the alien and placing him in 
+        the row.
+        """
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        self.aliens.add(alien)
 
     def _update_screen(self):
         """
