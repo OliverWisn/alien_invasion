@@ -14,6 +14,7 @@ class Alien(Sprite):
         """
         super().__init__()
         self.screen = ai_game.screen
+        self.settings = ai_game.settings
 
         # Reading out of the image of the spaceship of the alien and 
         # taking its rectangle.
@@ -28,3 +29,8 @@ class Alien(Sprite):
         # Storing of the exactly horizontal location of the spaceship 
         # of the alien.
         self.x = float(self.rect.x)
+
+    def update(self):
+        """Move the spaceship of the alien to the right."""
+        self.x += self.settings.alien_speed
+        self.rect.x = self.x

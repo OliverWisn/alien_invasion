@@ -21,3 +21,6 @@ class Settings:
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
+
+        # Settings relative to the spaceship of the alien.
+        self.alien_speed = 0.1
