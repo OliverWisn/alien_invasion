@@ -168,6 +168,7 @@ class AlienInvasion:
         self.aliens.draw(self.screen)
 
         pygame.display.flip()
+        pygame.time.delay(1)
 
 if __name__ == '__main__':
     # Setting up of the object of the game and the start-up of 
