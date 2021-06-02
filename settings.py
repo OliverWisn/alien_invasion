@@ -24,3 +24,6 @@ class Settings:
 
         # Settings relative to the spaceship of the alien.
         self.alien_speed = 0.2
+
+        # Settings relative to the time delay of the game.
+        self.time_delay = 1
