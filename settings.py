@@ -24,6 +24,10 @@ class Settings:
 
         # Settings relative to the spaceship of the alien.
         self.alien_speed = 0.2
+        self.fleet_drop_speed = 10
+        # Value "fleet_direction" amount 1 means to the right and -1 
+        # means to the left.
+        self.fleet_direction = 1
 
         # Settings relative to the time delay of the game.
         self.time_delay = 1
