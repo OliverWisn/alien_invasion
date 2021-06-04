@@ -195,6 +195,11 @@ class AlienInvasion:
         self._check_fleet_edges()
         self.aliens.update()
 
+        # Detecting of the collision between the spaceship of 
+        # the alien and the spaceship of the gamer.
+        if pygame.sprite.spritecollideany(self.ship, self.aliens):
+            print("The spaceship was hit!!!")
+
     def _update_screen(self):
         """
         Updating of the view on the screen and the transition to 
