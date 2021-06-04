@@ -110,7 +110,15 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
-        # Checking if the bullet hit the spaceship of the alien.
+        self._check_bullet_allien_collisions()
+
+    def _check_bullet_allien_collisions(self):
+        """
+        Reaction for the collision between the bullet and the spaceship 
+        of the alien.
+        """
+        # Disposal of all bullets and all spaceships of the aliens 
+        # between which was the collision.
         collisions = pygame.sprite.groupcollide(
             self.bullets, self.aliens, True, True)
 
