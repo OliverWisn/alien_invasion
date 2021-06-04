@@ -12,8 +12,9 @@ class Settings:
         self.screen_height = 700
         self.bg_color = (70, 130, 180)
         
-        # Settings relative to the ship.
+        # Settings relative to the ship of the gamer.
         self.ship_speed = 1.5
+        self.ship_limit = 3
 
         # Settings relative to the bullet.
         self.bullet_speed = 1.0
