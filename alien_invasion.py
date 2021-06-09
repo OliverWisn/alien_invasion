@@ -206,6 +206,23 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
 
+        # Searching for the the aliens that reach the bottom of 
+        # the screen.
+        self._check_aliens_bottom()
+
+    def _check_aliens_bottom(self):
+        """
+        Check that any spaceship of the aliens reach the bottom of 
+        the screen.
+        """
+        screen_rect = self.screen.get_rect()
+        for alien in self.aliens.sprites():
+            if alien.rect.bottom >= screen_rect.bottom:
+                # The same behavior like at the hitting of 
+                # the spaceship of the alien in the ship of the gamer.
+                self._ship_hit()
+                break
+
     def _ship_hit(self):
         """
         Reaction for the hitting of the spaceship of the alien in 
