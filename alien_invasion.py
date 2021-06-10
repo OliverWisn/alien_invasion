@@ -228,20 +228,21 @@ class AlienInvasion:
         Reaction for the hitting of the spaceship of the alien in 
         the ship of the gamer.
         """
-        # Decrease in the value keeps in the "ships_left".
-        self.stats.ships_left -= 1
+        if self.stats.ships_left > 0:
+            # Decrease in the value keeps in the "ships_left".
+            self.stats.ships_left -= 1
 
-        # Disposal of the content of the lists aliens and bullets.
-        self.aliens.empty()
-        self.bullets.empty()
+            # Disposal of the content of the lists aliens and bullets.
+            self.aliens.empty()
+            self.bullets.empty()
 
-        # Creation of the new full fleet of the spaceships of 
-        # the aliens and the centering of the ship of the gamer.
-        self._create_fleet()
-        self.ship.center_ship()
+            # Creation of the new full fleet of the spaceships of 
+            # the aliens and the centering of the ship of the gamer.
+            self._create_fleet()
+            self.ship.center_ship()
 
-        # Pause
-        sleep(0.5) 
+            # Pause
+            sleep(0.5) 
 
     def _update_screen(self):
         """

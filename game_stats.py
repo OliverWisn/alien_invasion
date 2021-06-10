@@ -7,6 +7,8 @@ class GameStats:
         """Initialization of the statistical dates."""
         self.settings = ai_game.settings
         self.reset_stats()
+        # Start-up of the game "Alien Invasion" in the active state.
+        self.game_active = True
 
     def reset_stats(self):
         """
