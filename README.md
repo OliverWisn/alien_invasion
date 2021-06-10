@@ -39,9 +39,9 @@ the game ends.
 
 ## Thanks:
 
-I would like to thank you my niece Dominika (she is 10 years old) for 
+I would like to thank to my niece Dominika (she is 10 years old) for 
 the making of the images of the spaceships of the alien and 
-the spaceship of the gamer especially for me for this game.
+the spaceship of the gamer especially for me and for this game.
 
 ## Game Controls:    
     a or <-- (Left arrow key) : Moves ship towards left.
