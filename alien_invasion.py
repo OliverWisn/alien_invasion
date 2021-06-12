@@ -5,6 +5,7 @@ import pygame
 
 from settings import Settings
 from game_stats import GameStats
+from button import Button
 from ship import Ship
 from bullet import Bullet
 from alien import Alien
@@ -34,6 +35,9 @@ class AlienInvasion:
         self.aliens = pygame.sprite.Group()
 
         self._create_fleet()
+
+        # Creation of the button Play
+        self.play_button = Button(self, self.screen, "Play")
 
     def run_game(self):
         """Start of the main loop of the game"""
@@ -74,7 +78,8 @@ class AlienInvasion:
         elif event.key == pygame.K_q or pygame.K_ESCAPE:
             sys.exit()
         elif event.key == pygame.K_SPACE:
-            self._fire_bullet()
+            if self.stats.game_active:
+                self._fire_bullet()
 
     def _check_keyup_events(self, event):
         """Reaction for the releasing of the key."""
@@ -95,7 +100,8 @@ class AlienInvasion:
     def _check_mouse_buttons(self, event):
         """Reaction for the pressing of the left mouse button."""
         if event.button == 1:
-            self._fire_bullet()
+            if self.stats.game_active:
+                self._fire_bullet()
 
     def _fire_bullet(self):
         """
@@ -257,6 +263,11 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
+
+        # Displaying of the button Play only when the game is not 
+        # active.
+        if not self.stats.game_active:
+            self.play_button.draw_button()
 
         pygame.display.flip()
         pygame.time.delay(self.settings.time_delay)
