@@ -64,7 +64,11 @@ class AlienInvasion:
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                self._check_mouse_buttons(event)
+                if self.stats.game_active:
+                    self._check_mouse_buttons(event)
+                else:
+                    mouse_pos = pygame.mouse.get_pos()
+                    self._check_play_button(mouse_pos)
 
         # Check for the pressed keys that didn't release.
         self._check_pressed_keys()
@@ -100,8 +104,15 @@ class AlienInvasion:
     def _check_mouse_buttons(self, event):
         """Reaction for the pressing of the left mouse button."""
         if event.button == 1:
-            if self.stats.game_active:
-                self._fire_bullet()
+            self._fire_bullet()
+
+    def _check_play_button(self, mouse_pos):
+        """
+        Running of the new game after the clicking of the button Play 
+        by the user.
+        """
+        if self.play_button.rect.collidepoint(mouse_pos):
+            self.stats.game_active = True
 
     def _fire_bullet(self):
         """
@@ -251,7 +262,10 @@ class AlienInvasion:
             self.ship.center_ship()
 
             # Pause
-            sleep(0.5) 
+            sleep(0.5)
+
+        else:
+            self.stats.game_active = False
 
     def _update_screen(self):
         """
