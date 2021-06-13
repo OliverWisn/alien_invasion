@@ -117,7 +117,18 @@ class AlienInvasion:
         the screen.
         """
         if self.play_button.rect.collidepoint(mouse_pos):
+            # Reseting of the statistical data of the game.
+            self.stats.reset_stats()
             self.stats.game_active = True
+
+            # Removal of the content of the lists aliens and bullets.
+            self.aliens.empty()
+            self.bullets.empty()
+
+            # Creation of the new full fleet of the spaceships of 
+            # the aliens and the centering of the ship of the gamer.
+            self._create_fleet()
+            self.ship.center_ship()
 
     def _fire_bullet(self):
         """
@@ -257,7 +268,7 @@ class AlienInvasion:
             # Decrease in the value keeps in the "ships_left".
             self.stats.ships_left -= 1
 
-            # Disposal of the content of the lists aliens and bullets.
+            # Removal of the content of the lists aliens and bullets.
             self.aliens.empty()
             self.bullets.empty()
 
