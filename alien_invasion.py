@@ -5,6 +5,7 @@ import pygame
 
 from settings import Settings
 from game_stats import GameStats
+from scoreboard import Scoreboard
 from button import Button
 from ship import Ship
 from bullet import Bullet
@@ -27,8 +28,10 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
 
         # Setting up of the object that keep the statistical dates 
-        # relative to the game.
+        # relative to the game and setting up of the object of 
+        # the class Scoreboard.
         self.stats = GameStats(self)
+        self.sb = Scoreboard(self)
 
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
@@ -302,6 +305,9 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
+
+        # Displaying of the information about the score.
+        self.sb.show_score()
 
         # Displaying of the button Play only when the game is not 
         # active.

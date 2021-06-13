@@ -23,7 +23,7 @@ class Scoreboard:
 
     def prep_score(self):
         """Conversion of the score to the rendered image."""
-        score_str = str(self, stats.score)
+        score_str = str(self.stats.score)
         self.score_image = self.font.render(score_str, True, 
             self.text_color, self.settings.bg_color)
 
