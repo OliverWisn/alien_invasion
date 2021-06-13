@@ -67,8 +67,9 @@ class AlienInvasion:
                 if self.stats.game_active:
                     self._check_mouse_buttons(event)
                 else:
-                    mouse_pos = pygame.mouse.get_pos()
-                    self._check_play_button(mouse_pos)
+                    if event.button == 1:
+                        mouse_pos = pygame.mouse.get_pos()
+                        self._check_play_button(mouse_pos)
 
         # Check for the pressed keys that didn't release.
         self._check_pressed_keys()
@@ -84,6 +85,9 @@ class AlienInvasion:
         elif event.key == pygame.K_SPACE:
             if self.stats.game_active:
                 self._fire_bullet()
+        elif event.key == pygame.K_p:
+            if not self.stats.game_active:
+                self.stats.game_active = True
 
     def _check_keyup_events(self, event):
         """Reaction for the releasing of the key."""
@@ -108,8 +112,8 @@ class AlienInvasion:
 
     def _check_play_button(self, mouse_pos):
         """
-        Running of the new game after the clicking of the button Play 
-        by the user.
+        Running of the new game after the clicking of the left mouse 
+        button on the button Play that is displaying on the screen.
         """
         if self.play_button.rect.collidepoint(mouse_pos):
             self.stats.game_active = True

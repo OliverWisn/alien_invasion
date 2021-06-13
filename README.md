@@ -47,7 +47,7 @@ the spaceship of the gamer especially for me and for this game.
     a or <-- (Left arrow key) : Moves ship towards left.
     d or --> (Right arrow key) : Moves ship towards right.
     Spacebar or left mouse button : To shoot bullets.
-    p : to start game (play).
+    p or left mouse button clicked on the button Play : to start game (play).
     q or Esc : to quit game.
 
 ## Version:
