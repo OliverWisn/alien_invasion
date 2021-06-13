@@ -117,6 +117,9 @@ class AlienInvasion:
         the screen.
         """
         if self.play_button.rect.collidepoint(mouse_pos):
+            # Reseting of the dynamic settings of the game.
+            self.settings.initialize_dynamic_settings()
+
             # Reseting of the statistical data of the game.
             self.stats.reset_stats()
             self.stats.game_active = True
