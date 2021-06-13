@@ -168,9 +168,11 @@ class AlienInvasion:
             self.bullets, self.aliens, True, True)
 
         if not self.aliens:
-            # Disposal of the existing bullets and the creation of 
-            # the new fleet of the spaceships of the aliens.
+            # Removal of the existing bullets, the acceleration of 
+            # the game and the creation of the new fleet of 
+            # the spaceships of the aliens.
             self.bullets.empty()
+            self.settings.increase_speed()
             self._create_fleet()
 
     def _create_fleet(self):
