@@ -112,8 +112,9 @@ class AlienInvasion:
 
     def _check_play_button(self, mouse_pos):
         """
-        Running of the new game after the clicking of the left mouse 
-        button on the button Play that is displaying on the screen.
+        Running of the new game as the reaction for the clicking of 
+        the left mouse button on the button Play that is displaying on 
+        the screen.
         """
         if self.play_button.rect.collidepoint(mouse_pos):
             self.stats.game_active = True
