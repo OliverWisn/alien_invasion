@@ -12,7 +12,9 @@ class GameStats:
         self.game_active = False
 
         # The best score should never be reset.
-        self.high_score = 0 
+        with open("save/save_high_score.txt") as file_object:
+            self.high_score = file_object.read()
+            self.high_score = int(self.high_score)
 
     def reset_stats(self):
         """
