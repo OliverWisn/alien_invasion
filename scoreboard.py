@@ -1,4 +1,7 @@
 import pygame.font
+from pygame.sprite import Group
+
+from ship import Ship
 
 class Scoreboard:
     """
@@ -8,6 +11,7 @@ class Scoreboard:
 
     def __init__(self, ai_game):
         """Initialization of the attributes that concern the score."""
+        self.ai_game = ai_game
         self.screen = ai_game.screen
         self.screen_rect = self.screen.get_rect()
         self.settings = ai_game.settings
@@ -16,14 +20,18 @@ class Scoreboard:
         # Settings of the font for the information that concern 
         # the score and the level.
         self.text_color = (30, 30, 30)
-        self.font = pygame.font.SysFont(None, 28)
+        self.font = pygame.font.SysFont(None, 32)
 
-        # Preparation of the initial images with the score.
+        # Preparation of the initial images with the scores.
         self.prep_score()
         self.prep_high_score()
 
         # Preparation of the initial image with the level.
         self.prep_level()
+
+        # Preparation of the images with the spaceships that leave for 
+        # the gamer.
+        self.prep_ships()
 
     def prep_score(self):
         """Conversion of the score to the rendered image."""
@@ -74,8 +82,21 @@ class Scoreboard:
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
+    def prep_ships(self):
+        """Displaying of the spaceships that leave for the gamer"""
+        self.ships = Group()
+        for ship_number in range(self.stats.ships_left):
+            ship = Ship(self)
+            ship.rect.x = 10 + ship_number * ship.rect.width
+            ship.rect.y = 10
+            self.ships.add(ship)
+
     def show_score(self):
-        """Displaying of the score and the level on the screen."""
+        """
+        Displaying  of the score, the level and the spaceships of 
+        the gamer on the screen.
+        """
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
         self.screen.blit(self.level_image, self.level_rect)
+        self.ships.draw(self.screen)
