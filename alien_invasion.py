@@ -61,6 +61,8 @@ class AlienInvasion:
         """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                with open("save/save_high_score.txt", "w") as file_object:
+                    file_object.write(str(self.stats.high_score))
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
@@ -124,25 +126,35 @@ class AlienInvasion:
         if self.play_button.rect.collidepoint(mouse_pos):
             # Reseting of the dynamic settings of the game.
             self.settings.initialize_dynamic_settings()
+            self._start_game()
 
-            # Reseting of the statistical data of the game.
-            self.stats.reset_stats()
-            self.stats.game_active = True
-            self.sb.prep_score()
-            self.sb.prep_level()
-            self.sb.prep_ships()
+    def _start_game(self):
+        """Start the new game."""
+        # Reseting of the statistical data of the game.
+        self.stats.reset_stats()
+        self.stats.game_active = True
+        self.sb.prep_images()
 
-            # Removal of the content of the lists aliens and bullets.
-            self.aliens.empty()
-            self.bullets.empty()
+        # Creation of the clear start.
+        self._clear_start()
+           
+        # Hide the mouse cursor.
+        pygame.mouse.set_visible(False)
 
-            # Creation of the new full fleet of the spaceships of 
-            # the aliens and the centering of the ship of the gamer.
-            self._create_fleet()
-            self.ship.center_ship()
+    def _clear_start(self):
+        """
+        Creation of the clear start after the hitting of the spaceship 
+        of the alien in the ship of the gamer or at the start of 
+        the new game.
+        """
+        # Removal of the content of the lists aliens and bullets.
+        self.aliens.empty()
+        self.bullets.empty()
 
-            # Hide the mouse cursor.
-            pygame.mouse.set_visible(False)
+        # Creation of the new full fleet of the spaceships of 
+        # the aliens and the centering of the ship of the gamer.
+        self._create_fleet()
+        self.ship.center_ship()
 
     def _fire_bullet(self):
         """
@@ -296,14 +308,8 @@ class AlienInvasion:
             self.stats.ships_left -= 1
             self.sb.prep_ships()
 
-            # Removal of the content of the lists aliens and bullets.
-            self.aliens.empty()
-            self.bullets.empty()
-
-            # Creation of the new full fleet of the spaceships of 
-            # the aliens and the centering of the ship of the gamer.
-            self._create_fleet()
-            self.ship.center_ship()
+            # Creation of the clear start.
+            self._clear_start()
 
             # Pause
             sleep(0.5)

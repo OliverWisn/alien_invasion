@@ -22,14 +22,25 @@ class Scoreboard:
         self.text_color = (30, 30, 30)
         self.font = pygame.font.SysFont(None, 32)
 
+        # Preparation of the other initial images.
+        self.prep_images()
+
+        # Preparation of the initial image with the high score.
+        self.prep_high_score()
+
+    def prep_images(self):
+        """
+        Preparation of the initial images with the actual score, 
+        the level of the game and with the spaceships of the gamer 
+        that left.
+        """
         # Preparation of the initial images with the scores.
         self.prep_score()
-        self.prep_high_score()
 
         # Preparation of the initial image with the level.
         self.prep_level()
 
-        # Preparation of the images with the spaceships that leave for 
+        # Preparation of the images with the spaceships that left for 
         # the gamer.
         self.prep_ships()
 
