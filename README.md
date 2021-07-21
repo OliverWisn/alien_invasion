@@ -1,15 +1,15 @@
 # Alien Invasion
 
 ## Motivation:
-I make this game "Alien Invasion" because I learn the python 
-language. I would like to walk through the python language essentials 
-with the standard library + pygame and the sublime text editor. I would 
-like to show my skills because I add to this programm my own code. 
+I maked this game "Alien Invasion" because I learned the python 
+language. I walked through the python language essentials + pygame and 
+the sublime text editor. I show also my skills because I added to this 
+programm my own code.
 
 <img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_1.jpg" width=1000>
 
 ## Rights:
-This game is made on the basis of the book "Python Crash Course - 
+This game was made on the basis of the book "Python Crash Course - 
 A Hands-On, Project-Based Introduction to Programming" by Eric Matthes. 
 The code is not the same like in the book. The autor of the book give 
 me the right, I quote, "to share the code you wrote for the exercises 
@@ -18,11 +18,13 @@ stipulation, I quote, "as long as you're not trying to create
 a learning resource based largely on the material from this book". 
 So please don't create a learning resource from this material.
 
+<img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_2.jpg" width=1000>
+
 ## Requirements: 
-python 3.7 - rest in requirements.txt .
+python 3.7 - rest in filr: "requirements.txt".
 
 ## Remarks:
-I make this game so that the master branch has always 
+I maked this game so that the master branch had always 
 the functioning code. To run the game you must run the file
 "alien_invasion.py".
 
@@ -39,10 +41,11 @@ the screen, the player loses a ship. If the player loses three ships,
 the game ends.
 
 ## Thanks:
+I want to thank my niece Dominika (she is 10 years old) for the making 
+of the images of the spaceships of the alien and the spaceship of 
+the gamer especially for me and for this game.
 
-I would like to thank to my niece Dominika (she is 10 years old) for 
-the making of the images of the spaceships of the alien and 
-the spaceship of the gamer especially for me and for this game.
+<img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_3.jpg" width=1000>
 
 ## Game Controls:    
     a or <-- (Left arrow key) : Moves ship towards left.
@@ -52,4 +55,4 @@ the spaceship of the gamer especially for me and for this game.
     q or Esc : to quit game.
 
 ## Version:
-This is version 1.0 of the game Alien Invasion.
+This is version 1.1 of the game Alien Invasion.
