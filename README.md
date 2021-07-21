@@ -55,4 +55,4 @@ the gamer especially for me and for this game.
     q or Esc : to quit game.
 
 ## Version:
-This is version 1.1 of the game Alien Invasion.
+This is version 1.11 of the game Alien Invasion.
