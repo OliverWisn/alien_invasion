@@ -6,7 +6,7 @@ language. I would like to walk through the python language essentials
 with the standard library + pygame and the sublime text editor. I would 
 like to show my skills because I add to this programm my own code. 
 
-https://github.com/OliverWisn/alien_invasion.git/blob/master/assets/demo_1.jpg?raw=true
+<img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_1.jpg" width=1000>
 
 ## Rights:
 This game is made on the basis of the book "Python Crash Course - 
