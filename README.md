@@ -1,7 +1,7 @@
 # Alien Invasion
 
 ## Motivation:
-I maked this game "Alien Invasion" because I learned the python 
+I made this game "Alien Invasion" because I learned the python 
 language. I walked through the python language essentials + pygame and 
 the sublime text editor. I show also my skills because I added to this 
 programm my own code.
@@ -24,7 +24,7 @@ So please don't create a learning resource from this material.
 python 3.7 - rest in filr: "requirements.txt".
 
 ## Remarks:
-I maked this game so that the master branch had always 
+I made this game so that the master branch had always 
 the functioning code. To run the game you must run the file
 "alien_invasion.py".
 
