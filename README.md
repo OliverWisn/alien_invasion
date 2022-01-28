@@ -26,7 +26,17 @@ python 3.7 - rest in file: "requirements.txt".
 ## Remarks:
 I made this game so that the master branch had always 
 the functioning code. To run the game you must run the file
-"alien_invasion.py".
+"alien_invasion.py". In addition, in the game files in the main 
+directory I put the file alien_invasion_win10_64.zip. This file 
+contains packed game files, which after unpacking will be in the 
+alien_invasion_win10_64 directory. These files are the completely 
+standalone package. In this directory you can find the file 
+alien_invasion.exe that can be run on windows 10 64 bit computer. To 
+run the game you must run the file "alien_invasion.exe". If you use 
+files contained in alien_invasion_win10_64.zip, then you do not need 
+to install any additional programs (e.g. set of python modules called 
+pygame). This allows you to run the game on any windows 10 64 bit 
+computer.
 
 ## Game Summary:
 In Alien Invasion, the player controls a ship that appears at the 
