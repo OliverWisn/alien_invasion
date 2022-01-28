@@ -21,7 +21,7 @@ So please don't create a learning resource from this material.
 <img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_2.jpg" width=1000>
 
 ## Requirements: 
-python 3.7 - rest in filr: "requirements.txt".
+python 3.7 - rest in file: "requirements.txt".
 
 ## Remarks:
 I made this game so that the master branch had always 
