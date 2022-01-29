@@ -103,7 +103,7 @@ class AlienInvasion:
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = False
 
-    def _check_pressed_keys(self): because of incorrect statement
+    def _check_pressed_keys(self):
         """Reaction for the pressed keys that didn't release."""
         keys = pygame.key.get_pressed()
 
