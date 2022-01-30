@@ -53,7 +53,9 @@ the game ends.
 ## Thanks:
 I want to thank my niece Dominika (she is 10 years old) for the making 
 of the images of the spaceships of the alien and the spaceship of 
-the gamer especially for me and for this game.
+the gamer especially for me and for this game. Thank you so much 
+@pydim for the fixing of the problem with the game crashing when some 
+keys were pressed.
 
 <img src="https://github.com/OliverWisn/alien_invasion/blob/master/assets/demo_3.jpg" width=1000>
 
